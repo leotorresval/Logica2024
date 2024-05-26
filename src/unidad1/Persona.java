@@ -18,6 +18,23 @@ public class Persona {
         this.apellido = apellido;
     }
 
+    public Persona(String cedula, String nombre, String apellido,
+                    char genero) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.genero = genero;
+    }
+    
+        public Persona(String cedula, String nombre, String apellido,
+                    char genero, int edad) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.genero = genero;
+        this.edad = edad;
+    }
+
     public Persona(String cedula, String nombre,
             String apellido, int edad) {
         this.cedula = cedula;
@@ -68,9 +85,9 @@ public class Persona {
         }
     }
 
-    public static void genCedulaPorCiudad(int semilla, int rango,String provincia) {
+    public static void genCedulaPorCiudad(int semilla, int rango, String provincia) {
         for (int i = 0; i < rango; i++) {
-            System.out.println(provincia+(000000L + semilla + i));
+            System.out.println(provincia + (000000L + semilla + i));
         }
     }
 
