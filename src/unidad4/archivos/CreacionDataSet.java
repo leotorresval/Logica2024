@@ -14,7 +14,7 @@ public class CreacionDataSet {
             File apellidos = new File("F:\\ALP\\Datasets\\Datasets\\Apellidos\\Apellidos(2).csv");
             Scanner leerNom = new Scanner(nombres);//9817
             Scanner leerApe = new Scanner(apellidos);//40463
-            long cedula = 1800000000;
+            int cedula = 1800000000;
             ArrayList<Persona> lista = new ArrayList();
             leerNom.nextLine();
             leerApe.nextLine();
