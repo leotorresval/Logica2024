@@ -23,7 +23,7 @@ public class PruebasPersonas {
         david.presentacionPersona();
 
         Persona diego = new Persona("1809", "Diego",
-                "Perez", 13);
+                "Perez", 'M',13);
         diego.presentacionPersona();
         //GENERADOR DE 10000 CEDULAS DE AMBATO
         Persona.genCedulaAmbato(100, 5000000);

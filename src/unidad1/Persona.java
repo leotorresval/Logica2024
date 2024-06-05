@@ -19,28 +19,32 @@ public class Persona {
     }
 
     public Persona(String cedula, String nombre, String apellido,
-                    char genero) {
+            char genero) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.genero = genero;
-    }
-    
-        public Persona(String cedula, String nombre, String apellido,
-                    char genero, int edad) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.genero = genero;
-        this.edad = edad;
     }
 
-    public Persona(String cedula, String nombre,
-            String apellido, int edad) {
+    public Persona(String cedula, String nombre, String apellido,
+            char genero, int edad) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.genero = genero;
         this.edad = edad;
+    }
+    
+
+    public Persona(String cedula, String nombre,
+            String apellido,char genero, int edad, 
+            String direccionDomiciliaria) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.genero=genero;
+        this.edad = edad;
+        this.direccionDomiciliaria = direccionDomiciliaria;
     }
 
     public Persona(String cedula, String nombre, String apellido, int edad, char genero, double estatura, String telefono, String direccionDomiciliaria) {
@@ -60,6 +64,8 @@ public class Persona {
         System.out.print("Cedula: " + cedula + " ");
         System.out.print("Nombre: " + nombre + " ");
         System.out.print("Apellido: " + apellido + " ");
+        System.out.print("Genero: " + genero + " ");
+        System.out.print("Ciudad: " + direccionDomiciliaria + " ");
         System.out.println("Edad: " + edad + " ");
     }
 
