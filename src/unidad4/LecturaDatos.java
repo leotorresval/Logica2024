@@ -14,7 +14,6 @@ public class LecturaDatos {
                 String nombre = teclado.next();
                 int edad = lecturaEnteros("Ingrese su edad");
                 double estatura = lecturaDecimales("Ingrese su estatura en metros");
-                System.out.println();
                 char [] v ={'M','F'};
                 char genero = lecturaCaracteres("Ingrese su genero [M/F]",v );
                 System.out.println("Ingrese si esta soltero [true/false]");
@@ -80,21 +79,16 @@ public class LecturaDatos {
         boolean bandera = true;
         char caracter = 0;
         String letrasPermitidas = Arrays.toString(letras);
-        boolean existe = false;
         while (bandera == true) {
             try {
                 Scanner teclado = new Scanner(System.in);
                 System.out.println(mensaje);
                 caracter = teclado.next().charAt(0);
-                for (char letra : letras) {
-                    if (letra == caracter) {
-                        bandera = false;
-                        existe = true;
-                    }
-                }
-                if (existe == false) {
-                    System.out.println("Ingrese solo caracteres " + letrasPermitidas);
-                    bandera = true;
+                boolean contiene = letrasPermitidas.contains(caracter+"");
+                if(contiene){
+                    bandera=false;
+                }else{
+                    caracter ="".charAt(0);
                 }
             } catch (Exception e) {
                 System.out.println("Ingrese solo caracteres " + letrasPermitidas);
