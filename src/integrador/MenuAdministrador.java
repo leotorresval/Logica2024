@@ -118,6 +118,13 @@ public class MenuAdministrador {
         empresas.set(i, empresa);
         System.out.println("Empresa modificada con éxito.");
     }
+    public static void añadirEmpresa(Empresa e, int i) {
+        Scanner scanner = new Scanner(System.in); 
+        System.out.print("Ingrese el teléfono: ");
+        String telefono = scanner.next();
+        e.setTelefono(telefono);
+        System.out.println("Empresa modificada con éxito.");
+    }
 
     public static void imprimirEmpresa() {
         for (Empresa empresa : empresas) {
@@ -137,9 +144,47 @@ public class MenuAdministrador {
                 break;
             }
         }
-        if(bandera==true)
+        if (bandera == true) {
             System.out.println("No existen coincidencias");
+        }
+    }
 
+    public static void modificarEmpresa2() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el ruc de la empresa");
+        String ruc = teclado.nextLine();
+        boolean bandera = true;
+        int j = 0;
+        for (Empresa empresa : empresas) {
+            if (ruc.equals(empresa.getRuc())) {
+                bandera = false;
+                añadirEmpresa(ruc, j);
+                break;
+            }
+            j++;
+        }
+        if (bandera == true) {
+            System.out.println("No existen coincidencias");
+        }
+    }
+
+    public static void modificarEmpresa3() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el ruc de la empresa");
+        String ruc = teclado.nextLine();
+        boolean bandera = true;
+        int j = 0;
+        for (Empresa empresa : empresas) {
+            if (ruc.equals(empresa.getRuc())) {
+                bandera = false;
+                añadirEmpresa(empresa, j);
+                break;
+            }
+            j++;
+        }
+        if (bandera == true) {
+            System.out.println("No existen coincidencias");
+        }
     }
 
     public static void main(String[] args) {
@@ -148,4 +193,23 @@ public class MenuAdministrador {
         guardarEmpresas();
         imprimirEmpresa();
     }
+    
+    /*
+    buscar materia
+    solicito nombre materia
+    for para recorrer y buscar
+    si encuentro solicito la informacion restante fecha, hora, 
+    info del estudiante
+    si no encuentro solicito de nuevo
+    */
+    
+        /*
+    buscar por tutor
+    listar materias
+    solicito nombre materia
+    for para recorrer y buscar
+    si encuentro solicito la informacion restante fecha, hora, 
+    info del estudiante
+    si no encuentro solicito de nuevo
+    */
 }
